@@ -46,4 +46,16 @@ public class CreateAccountStepDefinition {
 		CA = new CreateAccount(driver);
 		CA.isErrorDisplayed();
 	}
+	@Then ("the password error should display")
+	public void passworderror()
+	{
+		CA = new CreateAccount(driver);
+		CA.isPasswordErrorDisplayed();
+	}
+	@Then ("the confirm password error should display")
+	public void confirmpassworderror()
+	{
+		CA = new CreateAccount(driver);
+		CA.isConfirmPasswordErrorDisplayed();
+	}
 }
