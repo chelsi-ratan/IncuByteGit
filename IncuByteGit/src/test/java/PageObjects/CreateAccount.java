@@ -19,7 +19,17 @@ public class CreateAccount{
 	By ConfirmPassword=By.xpath("//div[@class='control']/input[@id='password-confirmation']");
 	By CreateAnAccount=By.xpath("//div[@class='primary']/button[@class='action submit primary']");
 	By Error = By.xpath("//div[text()='There is already an account with this email address. If you are sure that it is your email address, ']");
+	By PasswordError = By.xpath("//div[@id='password-error']");
+	By confirmPasswordError = By.xpath("//div[@id='password-confirmation-error']");
 	
+	public void isConfirmPasswordErrorDisplayed()
+	{
+		driver.findElement(confirmPasswordError).isDisplayed();
+	}
+	public void isPasswordErrorDisplayed()
+	{
+		driver.findElement(PasswordError).isDisplayed();
+	}
 	public void isErrorDisplayed()
 	{
 		driver.findElement(Error).isDisplayed();
